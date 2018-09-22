@@ -1,0 +1,15 @@
+{
+    "menu": [{
+        "label": "Packages",
+        "submenu": [{
+            "label": "Pug Autocompile",
+            "submenu": [{
+                "label": "Compile from current Selection",
+                "command": "pug-autocompile:compile-direct"
+            },{
+                "label": "Compile current File",
+                "command": "pug-autocompile:compile-file"
+            }]
+        }]
+    }]
+}

@@ -1,0 +1,34 @@
+{
+    "name": "pug-autocompile",
+    "main": "./lib/pug-autocompile",
+    "version": "0.0.0",
+    "description": "Compile Pug files to HTML",
+    "keywords": [
+        "autocompile",
+        "compile",
+        "dopustim",
+        "html",
+        "pug",
+        "template"
+    ],
+    "repository": "https://github.com/DopustimVladimir/atom-pug-autocompile",
+    "license": "MIT",
+    "engines": {
+        "atom": ">=1.30.0 <2.0.0"
+    },
+    "consumedServices": {
+        "status-bar": {
+            "versions": {
+                "^1.0.0": "consumeStatusBar"
+            }
+        }
+    },
+    "dependencies": {
+        "pug": "^2.0.0",
+        "pretty": "^2.0.0",
+        "mkdirp": "^0.5.0"
+    },
+    "devDependencies": {
+        "eslint": "^5.5.0"
+    }
+}

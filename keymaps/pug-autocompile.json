@@ -1,0 +1,14 @@
+{
+    ".platform-win32 atom-text-editor": {
+        "ctrl-shift-c d": "pug-autocompile:compile-direct",
+        "ctrl-shift-c f": "pug-autocompile:compile-file"
+    },
+    ".platform-linux atom-text-editor": {
+        "ctrl-shift-c d": "pug-autocompile:compile-direct",
+        "ctrl-shift-c f": "pug-autocompile:compile-file"
+    },
+    ".platform-darwin atom-text-editor": {
+        "cmd-shift-c d": "pug-autocompile:compile-direct",
+        "cmd-shift-c f": "pug-autocompile:compile-file"
+    }
+}
