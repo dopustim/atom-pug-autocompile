@@ -1,7 +1,7 @@
 {
     "name": "pug-autocompile",
     "main": "./lib/pug-autocompile",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "Compile Pug files to HTML",
     "keywords": [
         "autocompile",
