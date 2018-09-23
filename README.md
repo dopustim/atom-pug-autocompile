@@ -2,7 +2,7 @@
 # Pug Autocompile plugin for Atom
 
 [![apm](https://img.shields.io/apm/dm/pug-autocompile.svg?style=flat-square)](https://atom.io/packages/pug-autocompile)
-[![Deps](https://david-dm.org/DopustimVladimir/atom-pug-autocompile.svg)](https://david-dm.org/DopustimVladimir/atom-pug-autocompile)
+[![Deps](https://img.shields.io/david/DopustimVladimir/atom-pug-autocompile.svg?style=flat-square)](https://david-dm.org/DopustimVladimir/atom-pug-autocompile)
 [![Travis](https://img.shields.io/travis/DopustimVladimir/atom-pug-autocompile.svg?style=flat-square)](https://travis-ci.org/DopustimVladimir/atom-pug-autocompile)
 [![AppVeyor](https://img.shields.io/appveyor/ci/DopustimVladimir/atom-pug-autocompile.svg?style=flat-square)](https://ci.appveyor.com/project/DopustimVladimir/atom-pug-autocompile/branch/master)
 
