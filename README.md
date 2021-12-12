@@ -1,29 +1,18 @@
 
-# Pug Autocompile plugin for Atom
+# Pug Autocompile for Atom
 
-[![apm](https://img.shields.io/apm/dm/pug-autocompile.svg?style=flat-square)](https://atom.io/packages/pug-autocompile)
-[![Deps](https://img.shields.io/david/DopustimVladimir/atom-pug-autocompile.svg?style=flat-square)](https://david-dm.org/DopustimVladimir/atom-pug-autocompile)
-[![Travis](https://img.shields.io/travis/DopustimVladimir/atom-pug-autocompile.svg?style=flat-square)](https://travis-ci.org/DopustimVladimir/atom-pug-autocompile)
-[![AppVeyor](https://img.shields.io/appveyor/ci/DopustimVladimir/atom-pug-autocompile.svg?style=flat-square)](https://ci.appveyor.com/project/DopustimVladimir/atom-pug-autocompile/branch/master)
+This plugin makes it easy to compile HTML from Pug with options and notifications.
 
-[![GitHub tag](https://img.shields.io/github/tag/DopustimVladimir/atom-pug-autocompile.svg?style=flat-square)](https://github.com/DopustimVladimir/atom-pug-autocompile/tags)
-[![GitHub stars](https://img.shields.io/github/stars/DopustimVladimir/atom-pug-autocompile.svg?style=flat-square)](https://github.com/DopustimVladimir/atom-pug-autocompile/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/DopustimVladimir/atom-pug-autocompile.svg?style=flat-square)](https://github.com/DopustimVladimir/atom-pug-autocompile/issues)
-
-[![License](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](/LICENSE.md)
-
-This plugin allows you easy compile Pug files to HTML with options.
-
-Atom Package: https://atom.io/packages/pug-autocompile
+[![Atom Package](https://img.shields.io/apm/dm/pug-autocompile.svg?style=flat-square)](https://atom.io/packages/pug-autocompile)
 
 ## Installation
 
-From Atom: Settings ➔ Install ➔ Search for pug-autocompile
+Via Atom: Settings ➔ Install ➔ Search for "pug-autocompile"
 
-You can also install this plugin via command line:
+Via command line:
 
-```
-$ apm install pug-autocompile
+```sh
+apm install pug-autocompile
 ```
 
 ## Keymaps
