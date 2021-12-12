@@ -24,11 +24,11 @@
         }
     },
     "dependencies": {
-        "pug": "^2.0.0",
+        "pug": "^3.0.2",
         "pretty": "^2.0.0",
-        "mkdirp": "^0.5.0"
+        "mkdirp": "^1.0.4"
     },
     "devDependencies": {
-        "eslint": "^5.5.0"
+        "eslint": "^8.4.1"
     }
 }
