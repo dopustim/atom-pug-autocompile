@@ -11,7 +11,7 @@
         "pug",
         "template"
     ],
-    "repository": "https://github.com/DopustimVladimir/atom-pug-autocompile",
+    "repository": "https://github.com/dopustim/atom-pug-autocompile",
     "license": "MIT",
     "engines": {
         "atom": ">=1.30.0 <2.0.0"
