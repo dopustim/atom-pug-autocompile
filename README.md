@@ -26,20 +26,6 @@ You can also install this plugin via command line:
 $ apm install pug-autocompile
 ```
 
-## Usage
-
-**Compile from Selection**
-
-![gif](https://raw.githubusercontent.com/DopustimVladimir/atom-pug-autocompile/master/docs/compile-from-selection.gif)
-
-**Options Line**
-
-![gif](https://raw.githubusercontent.com/DopustimVladimir/atom-pug-autocompile/master/docs/options-line.gif)
-
-**Plugin Settings**
-
-![gif](https://raw.githubusercontent.com/DopustimVladimir/atom-pug-autocompile/master/docs/plugin-settings.gif)
-
 ## Keymaps
 
 **Windows / Linux**
@@ -56,7 +42,7 @@ $ apm install pug-autocompile
 
 Add the parameters on the first line of your Pug file.
 Your output file will be minified (default behaviour).
-Always start line with comment `// ` and separate options by comma `, `.
+Always start line with comment `//- ` and separate options by comma `, `.
 
 - `out: path/to/output.html` — path to your rendered HTML-file
 - `main: path/to/main.pug` — path to your main / parent Pug-file to be compiled
@@ -68,7 +54,7 @@ Always start line with comment `// ` and separate options by comma `, `.
 **index.pug**
 
 ```
-// out: build/index.html, pretty: true
+//- out: build/index.html, pretty: true
 doctype html
 html
     include includes/head.pug
@@ -79,7 +65,7 @@ html
 **includes/head.pug**
 
 ```
-// main: ../index.pug
+//- main: ../index.pug
 head
     title Pug Autocompile plugin for Atom
     link(href='/assets/css/main.css')
