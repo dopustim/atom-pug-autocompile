@@ -1,6 +1,5 @@
-// out: build/index.html, pretty: true
-doctype html
-html
-    include includes/head.pug
-    body
-        h1 Hello from Pug :)
+//- out: build/index.html, pretty: true
+extends layout.pug
+
+block content
+    h1 Hello from Pug :)
