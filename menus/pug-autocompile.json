@@ -4,20 +4,20 @@
         "submenu": [{
             "label": "Pug Autocompile",
             "submenu": [{
-                "label": "Compile from current Selection",
+                "label": "Compile selection from Pug to HTML",
                 "command": "pug-autocompile:compile-direct"
             },{
-                "label": "Compile current File",
+                "label": "Compile file from Pug to HTML",
                 "command": "pug-autocompile:compile-file"
             }]
         }]
     }],
     "context-menu": {
         "atom-text-editor[data-grammar~='pug']": [{
-            "label": "Compile from current Selection",
+            "label": "Compile selection from Pug to HTML",
             "command": "pug-autocompile:compile-direct"
         },{
-            "label": "Compile current File",
+            "label": "Compile file from Pug to HTML",
             "command": "pug-autocompile:compile-file"
         }]
     }
