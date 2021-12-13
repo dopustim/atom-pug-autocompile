@@ -11,5 +11,14 @@
                 "command": "pug-autocompile:compile-file"
             }]
         }]
-    }]
+    }],
+    "context-menu": {
+        "atom-text-editor[data-grammar~='pug']": [{
+            "label": "Compile from current Selection",
+            "command": "pug-autocompile:compile-direct"
+        },{
+            "label": "Compile current File",
+            "command": "pug-autocompile:compile-file"
+        }]
+    }
 }
