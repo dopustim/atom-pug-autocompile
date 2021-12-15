@@ -1,28 +1,12 @@
 {
     "name": "pug-autocompile",
-    "main": "./lib/pug-autocompile",
     "version": "0.1.0",
-    "description": "Compile Pug files to HTML",
-    "keywords": [
-        "autocompile",
-        "compile",
-        "dopustim",
-        "html",
-        "pug",
-        "template"
-    ],
-    "repository": "https://github.com/dopustim/atom-pug-autocompile",
+    "description": "Compile HTML from Pug with options and notifications",
+    "keywords": [ "dopustim", "pug", "autocompile", "compile", "html", "template" ],
+    "author": "DopustimVladimir",
     "license": "MIT",
-    "engines": {
-        "atom": ">=1.30.0 <2.0.0"
-    },
-    "consumedServices": {
-        "status-bar": {
-            "versions": {
-                "^1.0.0": "consumeStatusBar"
-            }
-        }
-    },
+    "repository": "https://github.com/dopustim/atom-pug-autocompile",
+    "main": "./lib/main",
     "dependencies": {
         "js-beautify": "^1.14.0",
         "pug": "^3.0.2"
@@ -45,6 +29,16 @@
         },
         "rules": {
             "max-len": [ 1, { "code": 100 } ]
+        }
+    },
+    "engines": {
+        "atom": ">=1.30.0 <2.0.0"
+    },
+    "consumedServices": {
+        "status-bar": {
+            "versions": {
+                "^1.0.0": "consumeStatusBar"
+            }
         }
     }
 }

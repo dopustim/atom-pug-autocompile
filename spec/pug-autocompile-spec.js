@@ -3,88 +3,72 @@
 import fs from "fs"
 import path from "path"
 
-import PugAutocompile from "../lib/pug-autocompile"
+import main from "../lib/main"
 
-const atom = global.atom
-
-const path2Pug = path.resolve(__dirname, "../test/index.pug")
-const path2Html = path.resolve(__dirname, "../test/build/index.html")
-const path2HtmlEx = path.resolve(__dirname, "../test/build_ex/index.html")
+const pugFile = path.resolve(__dirname, "./fixtures/index.pug")
+const compiledFile = path.resolve(__dirname, "./fixtures/build/index.html")
+const expectedFile = path.resolve(__dirname, "./fixtures/build_ex/index.html")
 
 const compileFileCommand = "pug-autocompile:compile-file"
 const compileDirectCommand = "pug-autocompile:compile-direct"
 
+const packageName = "pug-autocompile"
+
 // eslint-disable-next-line max-lines-per-function
-describe("Package \"pug-autocompile\"", () => {
+describe(`The package "${packageName}"`, () => {
 
     beforeEach(() => {
-        waitsForPromise(() => {
-            return atom.packages.activatePackage("pug-autocompile")
-        })
+        waitsForPromise(() => atom.packages.activatePackage(packageName))
     })
 
     it("should be activated", () => {
-        expect(atom.packages.isPackageActive("pug-autocompile")).toBe(true)
+        expect(atom.packages.isPackageActive(packageName)).toBe(true)
     })
 
-    // eslint-disable-next-line max-lines-per-function
-    describe("File \"index.pug\"", () => {
+    describe(`The Atom editor when the file "${pugFile}" is opened`, () => {
 
-        let editor, editorElement, compiled, expected
+        let editor, editorView, compiled, expected
 
         beforeEach(() => {
             waitsForPromise(() => {
-                return atom.workspace.open(path2Pug).then((ed) => {
+                return atom.workspace.open(pugFile).then((ed) => {
                     editor = ed
-                    editorElement = atom.views.getView(editor)
+                    editorView = atom.views.getView(editor)
                 })
             })
         })
 
-        it("should be opened", () => {
-            expect(PugAutocompile.isPugFile(editor.getPath())).toBe(true)
-        })
+        it(`should properly compile this file to HTML via command
+            "${compileFileCommand}"`, () => {
 
-        it("should be properly compiled to \"index.html\" via command \"compile-file\"", () => {
-
-            spyOn(PugAutocompile, "showSuccess")
+            spyOn(main, "showSuccess")
 
             runs(() => {
-                atom.commands.dispatch(editorElement, compileFileCommand)
+                atom.commands.dispatch(editorView, compileFileCommand)
             })
-
-            waitsFor(() => {
-                return PugAutocompile.showSuccess.callCount > 0
-            })
-
+            waitsFor(() => main.showSuccess.callCount > 0)
             runs(() => {
-                compiled = fs.readFileSync(path2Html, "utf8")
-                expected = fs.readFileSync(path2HtmlEx, "utf8")
+                compiled = fs.readFileSync(compiledFile, "utf8")
+                expected = fs.readFileSync(expectedFile, "utf8")
                 expect(compiled).toBe(expected)
             })
         })
 
-        describe("All selected content\"", () => {
+        it(`should properly replace selected content with HTML via command
+            "${compileDirectCommand}"`, () => {
 
-            it("should be properly replaced with HTML via command \"compile-direct\"", () => {
+            spyOn(main, "showSuccess")
 
-                spyOn(PugAutocompile, "showSuccess")
-
-                runs(() => {
-                    editor.selectAll()
-                    atom.commands.dispatch(editorElement, compileDirectCommand)
-                })
-
-                waitsFor(() => {
-                    return PugAutocompile.showSuccess.callCount > 0
-                })
-
-                runs(() => {
-                    editor.selectAll()
-                    compiled = editor.getText()
-                    expected = fs.readFileSync(path2HtmlEx, "utf8")
-                    expect(compiled).toBe(expected)
-                })
+            runs(() => {
+                editor.selectAll()
+                atom.commands.dispatch(editorView, compileDirectCommand)
+            })
+            waitsFor(() => main.showSuccess.callCount > 0)
+            runs(() => {
+                editor.selectAll()
+                compiled = editor.getText()
+                expected = fs.readFileSync(expectedFile, "utf8")
+                expect(compiled).toBe(expected)
             })
         })
     })
