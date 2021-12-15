@@ -28,6 +28,23 @@
         "pug": "^3.0.2"
     },
     "devDependencies": {
+        "@dopustim/eslint-config": "^1.0.0",
         "eslint": "^8.4.1"
+    },
+    "eslintConfig": {
+        "extends": "@dopustim/eslint-config",
+        "env": {
+            "atomtest": true,
+            "jasmine": true,
+            "es2020": true,
+            "node": true
+        },
+        "parserOptions": {
+            "sourceType": "module",
+            "ecmaVersion": 2020
+        },
+        "rules": {
+            "max-len": [ 1, { "code": 100 } ]
+        }
     }
 }
