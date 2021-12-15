@@ -17,43 +17,58 @@ apm install pug-autocompile
 
 ## Keymaps
 
+Works only with ".pug" files!
+
 **Windows / Linux**
 
-- Push `Ctrl+ Shift+ C` then `D` to compile from current selection
-- Push `Ctrl+ Shift+ C` then `F` to compile current file
+| Command | Description |
+| --- | --- |
+| `Ctrl+ Shift+ C` then `D` | compile selection |
+| `Ctrl+ Shift+ C` then `F` | compile file |
 
 **macOS**
 
-- Push `Cmd+ Shift+ C` then `D` to compile from current selection
-- Push `Cmd+ Shift+ C` then `F` to compile current file
+| Command | Description |
+| --- | --- |
+| `Cmd+ Shift+ C` then `D` | compile selection |
+| `Cmd+ Shift+ C` then `F` | compile file |
 
-## Options
+## Options Line
 
-Add the parameters on the first line of your Pug file.
-Your output file will be minified (default behaviour).
-Always start line with comment `//- ` and separate options by comma `, `.
+The options line should be the first. The output file will be minified (default behaviour). Always start the options line with comment `//-` and separate options by comma `, `.
 
-- `out: path/to/output.html` — path to your rendered HTML-file
-- `main: path/to/main.pug` — path to your main / parent Pug-file to be compiled
-- `pretty: true` — make your HTML pretty
-- `compress: false` — make your HTML pretty
+| Parameter | Description |
+| --- | --- |
+| `out: path/to/output.html` | path to output (target) HTML file |
+| `main: path/to/main.pug` | path to main (parent) Pug file |
+| `pretty: true` | makes HTML pretty (`false` to vice versa) |
 
-## Examples
+## Example
 
 **index.pug**
 
-```
+```pug
 //- out: build/index.html, pretty: true
+extends layout.pug
+
+block content
+    h1 Hello from Pug :)
+```
+
+**layout.pug**
+
+```pug
+//- main: index.pug
 doctype html
 html
     include includes/head.pug
     body
-        h1 Hello from Pug :)
+        block content
 ```
 
 **includes/head.pug**
 
-```
+```pug
 //- main: ../index.pug
 head
     title Pug Autocompile plugin for Atom
