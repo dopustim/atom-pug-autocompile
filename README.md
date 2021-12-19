@@ -60,7 +60,7 @@ block content
 ```pug
 //- main: index.pug
 doctype html
-html
+html(lang="en")
     include includes/head.pug
     body
         block content
@@ -71,24 +71,21 @@ html
 ```pug
 //- main: ../index.pug
 head
-    title Pug Autocompile plugin for Atom
-    link(href='/assets/css/main.css')
+    title Demo
+    link(href="/assets/css/main.css")
 ```
 
 **build/index.html**
 
 ```html
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Pug Autocompile plugin for Atom</title>
+    <title>Demo</title>
     <link href="/assets/css/main.css">
 </head>
-
 <body>
     <h1>Hello from Pug :)</h1>
 </body>
-
 </html>
 ```
