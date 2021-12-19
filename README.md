@@ -15,6 +15,12 @@ Via command line:
 apm install pug-autocompile
 ```
 
+## Usage
+
+Via menu: Packages ➔ Pug Autocompile ➔ Compile ...
+
+Via context menu: Right Click ➔ Compile ...
+
 ## Keymaps
 
 Works only with ".pug" files!
