@@ -41,7 +41,7 @@ Works only with ".pug" files!
 
 ## Options Line
 
-The options line should be the first. The output file will be minified (default behaviour). Always start the options line with comment `//-` and separate options by comma `, `.
+The options line should be the first. The output file will be minified (default behaviour). Always start the options line with comment `//-` and separate options by comma `,`.
 
 | Parameter | Description |
 | --- | --- |
