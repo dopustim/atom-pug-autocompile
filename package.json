@@ -12,7 +12,7 @@
         "pug": "^3.0.2"
     },
     "devDependencies": {
-        "@dopustim/eslint-config": "^1.0.0",
+        "@dopustim/eslint-config": "^1.1.0",
         "eslint": "^8.7.0"
     },
     "eslintConfig": {
