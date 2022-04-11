@@ -8,7 +8,7 @@
     "repository": "https://github.com/dopustim/atom-pug-autocompile",
     "main": "./lib/main",
     "dependencies": {
-        "js-beautify": "^1.14.0",
+        "js-beautify": "^1.14.3",
         "pug": "^3.0.2"
     },
     "devDependencies": {
